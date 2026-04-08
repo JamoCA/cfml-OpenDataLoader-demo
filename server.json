@@ -1,0 +1,6 @@
+{
+    "name":"opendataloader-pdf-poc",
+    "app":{
+        "cfengine":"adobe@2023"
+    }
+}
