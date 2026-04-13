@@ -62,6 +62,9 @@ if (structKeyExists(form, "btnConvert") && jarExists) {
 		config.setGenerateHtml(jFalse);
 		config.setGeneratePDF(jFalse);
 		config.setGenerateMarkdown(jFalse);
+		config.setAddImageToMarkdown(jFalse);
+		config.setUseHTMLInMarkdown(jFalse);
+		config.setImageOutput(config.IMAGE_OUTPUT_OFF);
 
 		// Enable only selected formats
 		for (fmt in selectedFormats) {
@@ -88,6 +91,7 @@ if (structKeyExists(form, "btnConvert") && jarExists) {
 				case "markdown-with-images":
 					config.setGenerateMarkdown(jTrue);
 					config.setAddImageToMarkdown(jTrue);
+					config.setImageOutput(config.IMAGE_OUTPUT_EXTERNAL);
 					break;
 			}
 		}
